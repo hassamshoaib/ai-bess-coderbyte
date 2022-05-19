@@ -1,0 +1,40 @@
+
+
+POST http://localhost:3000/categories HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "title": "Cleansing",
+    "discount": 0,
+    "parentCategoryReference": null
+}
+
+###
+
+POST http://localhost:3000/categories HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2,
+    "title": "Soaps",
+    "discount": 0,
+    "parentCategoryReference": 1
+}
+
+###
+
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pears Soap",
+    "code": "PS-2001",
+    "discount": 10,
+    "price": 200,
+    "categoryReference": 10
+}
+
+###
+
+GET http://localhost:3000/payments/product-discount?productCode=PS-2001&userId=25&invoiceTotal=22 HTTP/1.1
