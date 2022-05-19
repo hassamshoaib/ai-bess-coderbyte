@@ -5,7 +5,7 @@ for their repective category so that any change in category discount can be refl
 
 I have used recursion to process the hierarchy of categories to find out the discount associated with the very first category
 
-I have use seperate modules for product, category and payment to maintain the code seperation and followed best practices wherever possible
+I have used seperate modules for product, category and payment to maintain the code seperation and followed best practices wherever possible
 
 For quick authentication I have used guards to protect the payment/product-discount API
 
